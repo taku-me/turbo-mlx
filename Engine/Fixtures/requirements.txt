@@ -2,8 +2,8 @@
 # worker (Engine/Reference/turbo_worker.py); the app installed an earlier one while it had a Python
 # engine. 0.22 runs Qwen-Image-Edit 2511 with zero_cond_t and keeps Qwen-Image's output norm bias.
 # 0.23 adds FLUX 3 Image Klein. Pillow 13.0.0 imports and saves an image on Python 3.12.13 (checked 2026-11-25);
-# Pillow 12.x still has 62 known vulnerabilities (OSV), 13.0.0 has none, hence >=13.
-pillow>=13.0.0,<14
+# Pillow 12.x still has 62 known vulnerabilities (OSV), 13.0.0 has none, hence pinned to 13.0.0 (same as requirements-sensenova.txt).
+pillow==13.0.0
 mflux==0.23.0
 # The MLX of the engine's mlx-swift (Engine/Package.resolved): a newer one moves the quantized
 # passes by a few thousandths, and the fixtures then stop matching bit for bit.
